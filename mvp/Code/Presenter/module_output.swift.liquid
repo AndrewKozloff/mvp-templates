@@ -6,12 +6,10 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-enum {{ module_info.name }}OutputModel {
+enum {{ module_info.name }}OutputState {
 	case next
 }
 
-typealias {{ module_info.name }}OutputBlock = ({{ module_info.name }}OutputModel) -> Void
-
 protocol {{ module_info.name }}ModuleOutput: class {
-	var onFinish: {{ module_info.name }}OutputBlock? { get set }
+	func finish(module: {{ module_info.name }}ModuleInput, with state: {{ module_info.name }}OutputState)
 }

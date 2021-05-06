@@ -12,10 +12,11 @@ final class {{ module_info.name }}ModuleConfigurator {
 
     // MARK: - Internal methods
 
-    func configure() -> ({{ module_info.name }}ViewController, {{ module_info.name }}ModuleOutput) {
+    func configure(output: {{ module_info.name }}ModuleOutput) -> (UIViewController, {{ module_info.name }}ModuleInput) {
         let view = {{ module_info.name }}ViewController()
         let presenter = {{ module_info.name }}Presenter()
 
+        presenter.output = output
         presenter.view = view
         view.output = presenter
 

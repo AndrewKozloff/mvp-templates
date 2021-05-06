@@ -6,13 +6,11 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-final class {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput, {{ module_info.name }}ModuleInput, {{ module_info.name }}ModuleOutput {
-
-    // MARK: - {{ module_info.name }}ModuleOutput
-
-    var onFinish: {{ module_info.name }}OutputBlock?
+final class {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput, {{ module_info.name }}ModuleInput {
 
     // MARK: - Properties
+
+    weak var output: {{ module_info.name }}ModuleOutput?
 
     weak var view: {{ module_info.name }}ViewInput?
 
