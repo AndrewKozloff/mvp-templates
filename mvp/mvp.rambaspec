@@ -1,0 +1,24 @@
+# Template information section
+name: "mvp"
+summary: "Template for creating MVP modules with coordinator."
+author: "Andrey Kozlov"
+version: "1.0.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Configurator
+- {name: Configurator/ModuleConfigurator.swift, path: Code/Configurator/module_configurator.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+- {name: Presenter/ModuleInput.swift, path: Code/Presenter/module_input.swift.liquid}
+- {name: Presenter/ModuleOutput.swift, path: Code/Presenter/module_output.swift.liquid}
+
+# View layer
+- {name: View/ViewController.swift, path: Code/View/view_controller.swift.liquid}
+- {name: View/ViewInput.swift,  path: Code/View/view_input.swift.liquid}
+- {name: View/ViewOutput.swift, path: Code/View/view_output.swift.liquid}
+
+

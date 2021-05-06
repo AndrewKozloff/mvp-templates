@@ -1,0 +1,17 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+enum {{ module_info.name }}OutputModel {
+	case next
+}
+
+typealias {{ module_info.name }}OutputBlock = ({{ module_info.name }}OutputModel) -> Void
+
+protocol {{ module_info.name }}ModuleOutput: class {
+	var onFinish: {{ module_info.name }}OutputBlock? { get set }
+}
